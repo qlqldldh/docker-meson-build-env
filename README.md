@@ -9,7 +9,7 @@ docker build -t {img-name} --build-arg GITHUB_USERNAME={username} --build-arg GI
 ## Create Container
 
 ```sh
-docker run --name {container-name} {img-name}
+docker run --name {container-name} -it {img-name} -d
 ```
 
 ## Run Container
