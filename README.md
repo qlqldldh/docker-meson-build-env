@@ -12,8 +12,14 @@ docker build -t {img-name} --build-arg GITHUB_USERNAME={username} --build-arg GI
 docker run --name {container-name} -it {img-name} -d
 ```
 
-## Run Container
+## Start Container
 
 ```sh
 docker container start {container-name}
+```
+
+## Stop Container
+
+```sh
+docker container stop {container-name}
 ```
