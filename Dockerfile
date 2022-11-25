@@ -2,6 +2,7 @@ FROM ubuntu:20.04
 
 ARG GITHUB_USERNAME
 ARG GITHUB_EMAIL
+ARG PROJ_NAME
 
 RUN apt-get update
 RUN apt-get install -y sudo
@@ -19,7 +20,7 @@ RUN apt-get install ninja-build
 RUN pip install ninja
 RUN pip install meson
 
-WORKDIR /usr/src/veritas
+WORKDIR /usr/src/${PROJ_NAME}
 
 RUN git init
 RUN meson init
