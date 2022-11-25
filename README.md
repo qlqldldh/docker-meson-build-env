@@ -3,13 +3,13 @@
 ## Build
 
 ```sh
-docker build -t {img-name} --build-arg GITHUB_USERNAME={username} --build-arg GITHUB_PASSWORD={password} .
+docker build -t {img-name} --build-arg GITHUB_USERNAME={username} --build-arg GITHUB_PASSWORD={password} --build-arg PROJ_NAME={project-name}.
 ```
 
 ## Create Container
 
 ```sh
-docker run --name {container-name} -it {img-name} -d
+docker container create --name {container-name} -it {img-name}
 ```
 
 ## Start Container
